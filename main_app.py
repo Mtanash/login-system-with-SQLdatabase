@@ -28,7 +28,7 @@ class App:
                 break
             elif user_input == "login":
                 self.database.login(input("Enter username: "),
-                                    input("Enter password: "))
+                                    getpass("Enter password: "))
             elif user_input == "logout":
                 if self.database.current_user:
                     self.database.current_user.remove_user()
@@ -36,7 +36,7 @@ class App:
             elif user_input == "register":
                 self.database.register(input("Enter username: "),
                                        input("Enter email: "),
-                                       input("Enter password: "))
+                                       getpass("Enter password: "))
             elif user_input == "print_user":
                 print(self.database.current_user)
             else:
